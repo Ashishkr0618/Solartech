@@ -1,0 +1,92 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color:black;
+    font-size: xx-large;
+}
+header:hover h1{
+    color:red;
+}
+.aa11{
+    text-align: center;
+    position: absolute;
+    top:8em;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:  #0c0e17; 
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    padding: 40px; 
+}
+.planets {
+    display:inline-block;
+    margin: 40px; 
+}
+
+
+.box {
+    text-align: center;
+    position: relative;
+    top:20em;
+    width: 180px; 
+    height: 180px; 
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: white; 
+    
+}
+
+
+.label {
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:red; 
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 1em; 
+    transition: bottom 0.3s ease;
+}
+
+
+.box:hover .label{
+    bottom: 15px;
+    background-color:  rgba(0, 0, 0, 0.7);
+}

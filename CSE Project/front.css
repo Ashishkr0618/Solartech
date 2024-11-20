@@ -1,0 +1,117 @@
+/* 
+ body{
+    background-color: black;
+ }
+.pd{
+    margin:100px;
+    position:absolute;
+    left:-6.5em;
+    top:2em;
+    height: 150px;
+    width: 150px;
+    padding:140px;
+    transition:1s; 
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    font-weight: 100;
+    font-size: x-large;
+    text-align: center;
+}
+.planets{
+    display: block;
+    transition: .3s;
+   
+}
+.pd:hover img{
+    transform: scale(1.3)
+}
+.gd{
+    margin:12px;
+    position:absolute;
+    left:50em;
+    top:2em;
+    height: 150px;
+    width: 150px;
+    padding:25px;
+    transition:  1s; 
+    border-radius: 10px;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:right;
+    color:red;
+    font-weight: 100;
+    font-size: x-large;}
+
+    .galaxy{
+        display: block;
+        transition: .3s;
+    }
+.gd:hover img{
+    transform: scale(1.3);
+
+} */
+.main{
+    background-color: rgb(113, 113, 113);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    word-spacing: 20px;
+    margin:auto;
+    padding:1px;
+}
+body {
+    background-color: black; 
+    /* display: flex;  */
+    justify-content: center; 
+    align-items: center; 
+    height: 300vh; 
+    margin: 0; 
+}
+
+
+.pd, .gd {
+    margin: 20px; 
+    position: relative; 
+    height: 250px; 
+    width: 250px; 
+    padding: 20px; 
+    border: 5px solid white; 
+    border-radius: 10px; 
+    /* display: flex;  */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color:rgb(29, 28, 28);
+    
+}
+
+.pd img, .gd img {
+    max-width: 100%; 
+    max-height: 100%; 
+    transition: transform 0.3s; 
+}
+
+.pd:hover img, .gd:hover img {
+    transform: scale(1.2);
+}
+
+.text1 {
+    color: white; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size:x-large ; 
+    text-align: center; 
+    margin-top: -20px; 
+}
+.text2 {
+    color: white; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+    font-size: x-large; 
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+
+/* .planets, .galaxy {
+    display: block;
+} */

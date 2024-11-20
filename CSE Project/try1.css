@@ -1,0 +1,530 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav a.active {
+    color: #f00; /* Active link color */
+    font-weight: bold;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-repeat: repeat;
+}
+
+#home {
+    background-color: #11141a; /* Example: dark semi-transparent background for home */
+    /* background-image: url(https://imgs.search.brave.com/Diul1aPxzwc-LtQ3DsgV-qiN4osEyAZgfps8WkvtE6E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzc5LzA3Lzc3/LzM2MF9GXzE3OTA3/Nzc5Nl9QNlVOSFg2/S0JwYjFoSVRKU0Yx/Z04xNzNxdzRHRjk4/VS5qcGc); */
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-repeat: repeat;
+
+}
+#about {
+    background-color: #0c0e17; /* Darker background to match your theme */
+    padding: 60px;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0ef;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-container p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.about-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-box {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.about-box:hover {
+    transform: scale(1.05); /* Slight hover effect for interaction */
+}
+
+.about-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-box h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #0ef;
+}
+
+.about-box p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .about-box {
+        width: 100%; /* Stack boxes vertically on smaller screens */
+    }
+}
+
+
+#contact {
+    background-color: #11141a; /* Dark background */
+    padding: 50px;
+    min-height: 100vh;
+    color: white;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #0ef;
+}
+
+.contact-container p {
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #0ef;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #0ef;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0ac;
+    color: white;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    word-spacing: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+nav a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+    padding:20px;
+   
+}
+nav a:hover{
+    color:#0ef;
+    
+   
+   
+}
+
+.img1{
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top:15em ;
+    left:0em;
+    z-index: 1;
+}
+
+
+.label {
+    position: absolute; /* Positioning for the label */
+    bottom: 10px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    color: white; /* Text color */
+    font-size: 20px; /* Text size */
+    text-shadow: 1px 1px 2px black; /* Optional: shadow for better visibility */
+}
+
+.container {
+    font-size: 6px;
+    width: 100%;
+    height:100%;
+    position: relative;
+    z-index: 0;
+
+}
+
+.links {
+    position: absolute;
+    z-index: -1; /* Ensure links are above the solar system */
+}
+
+.box1 {
+    position: absolute; /* Positioning for planet */
+    top: -16em; /* Adjust as needed */
+    left: 75em; /* Adjust as needed */
+    width: 280px;  
+    height: 280px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid white; 
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.box2 {
+    position: absolute; /* Positioning for galaxy */
+    top: -16em; /* Adjust as needed */
+    right: -20em; /* Adjust as needed */
+    width: 280px;  
+    height: 280px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid white; 
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.box1 img, .box2 img {
+    width: 230px; 
+    height: 230px; 
+    object-fit: cover; 
+    transition: transform 0.3s; 
+}
+
+.box1:hover img, .box2:hover img {
+    transform: scale(1.1); /* Enlarge only the image on hover */
+}
+
+
+
+
+
+.container {
+    font-size: 6px;
+    width: 100em;
+    height: 100em;
+    position: relative;
+    z-index: -1;
+}
+img{
+    height: 130%;
+    width: 130%;
+}
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 65em;
+    left: 120em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(255, 128, 0);
+    animation: orbit 50s linear infinite;
+    z-index: 1000;
+    /* background-color: navy; */
+    
+}
+.mercury,
+.venus,
+.earth,
+.moon,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: .1em .1em 0em 0em;
+    border-radius: 50%;
+}
+.mercury {
+    top: 61em;
+    left: 116em;
+    width:18em;
+    height:18em;
+    animation: orbit 10s linear infinite;
+    z-index: 10;
+}
+
+.venus {
+    top: 58em;
+    left: 113em;
+    width: 24em;
+    height: 24em;
+    animation: orbit 15s linear infinite;
+    z-index: 9; 
+}
+
+.earth {
+    top: 53em;
+    left: 108em;
+    width: 34em;
+    height: 34em;   
+    animation: orbit 30s linear infinite;  
+    z-index: 8; 
+}
+.moon {
+    top: 4em;
+    right: 0em;
+    width: 5em;
+    height: 7em; 
+    animation: orbit 5s linear infinite;
+    /* animation: orbit 5s linear infinite; */
+}
+.mars {
+    top: 48em;
+    left: 103em;
+    width: 44em;
+    height: 44em; 
+    animation: orbit 38s linear infinite;
+    z-index: 7;
+}
+.jupiter {
+    top: 43em;
+    left: 98em;
+    width: 54em;
+    height: 54em; 
+    animation: orbit 50s linear infinite;
+    z-index: 6;
+}
+.saturn {
+    top: 37em;
+    left: 93em;
+    width: 66em;
+    height: 66em; 
+    animation: orbit 65s linear infinite;
+    z-index: 5;
+}
+.uranus {
+    top: 32em;
+    left: 88em;
+    width: 76em;
+    height: 76em; 
+    animation: orbit 85s linear infinite;
+    z-index: 4;
+}
+.neptune {
+    top: 27em;
+    left: 83em;
+    width: 86em;
+    height: 86em; 
+    animation: orbit 105s linear infinite;
+    z-index: 3;
+}
+.pluto {
+    top: 22em;
+    left: 78em;
+    width: 96em;
+    height: 96em; 
+    animation: orbit 120s linear infinite;
+    z-index: 2;
+    /* background-color: red; */
+}
+
+.mercury::before,
+.venus::before,
+.earth::before,
+.moon::before,
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before,
+.neptune::before,
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+.mercury::before {
+    top: 1.6em;
+    right:1.6em;
+    width: 2em;
+    height: 2em;
+    background-image: url(mercury.png);
+    background-size: contain;
+}
+.venus::before {
+    top: 2.4em;
+    right: 2.4em;
+    width: 2em;
+    height: 2em;
+    background-image: url(venus.png);
+    background-size: cover;
+}
+.earth::before {
+    top: 2.4em;
+    right: 2.4em;
+    width: 5em;
+    height: 5em;
+    background-image: url(earth.png);
+    background-size: cover;
+}
+
+/* .moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url(moon.png);
+    background-size: cover;
+} */
+.mars::before {
+    top: 4.8em;
+    right: 4.8em;
+    width: 3em;
+    height: 3em;
+    background-image: url(mars.png);
+    background-size: cover;
+}
+.jupiter::before {
+    top: 4.6em;
+    right: 4.6em;
+    width: 6em;
+    height: 6em;
+    background-image: url(jupiter.png); 
+ background-size: cover; 
+    /* background-color: aqua; */
+}
+.saturn::before {
+    top: 7em;
+    right: 7em;
+    width: 4.5em;
+    height: 4.5em;
+    background-image: url(saturn.png);
+    background-size: cover;
+}
+.uranus::before {
+    top: 8.8em;
+    right: 8.8em;
+    width: 4em;
+    height: 4em;
+    background-image: url(uranus.png);
+    background-size: cover;
+}
+.neptune::before {
+    top: 10.3em;
+    right: 10.3em;
+    width: 4em;
+    height: 4em;
+    background-image: url(neptune.png);
+    background-size: cover;
+}
+.pluto::before {
+    top: 11.7em;
+    right: 11.7em;
+    width: 4em;
+    height: 4em;
+    background-image: url(pluto.png);
+    background-size: cover;
+    
+}
+
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
